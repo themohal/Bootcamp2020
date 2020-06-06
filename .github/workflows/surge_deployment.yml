@@ -30,8 +30,8 @@ jobs:
         cmd: install # will run `yarn install` command
       
     - name: Build React App
-      run: yarn build
+      run: ./Class2/project001/ yarn build
     - name : Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./Class2/project001 Bootcamp2020FarjadReactApp.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./Class2/project001/ Bootcamp2020FarjadReactApp.surge.sh --token ${{secrets.SURGE_TOKEN}}
