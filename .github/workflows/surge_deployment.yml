@@ -16,6 +16,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env: 
+     working-directory: ./Class2/project001
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -28,14 +30,11 @@ jobs:
     - uses: borales/actions-yarn@v2.0.0
       
       with:
-        working-directory: ./Class2/project001/
         cmd: install # will run `yarn install` command
       
     - name: Build React App
       run: yarn build
     - name : Install Surge
-      working-directory: ./Class2/project001/
       run: npm install -g surge
     - name: Run Surge
-      working-directory: ./Class2/project001/
       run: surge ./build Bootcamp2020FarjadReactApp.surge.sh --token ${{secrets.SURGE_TOKEN}}
