@@ -30,8 +30,10 @@ jobs:
       with:
         cmd: install # will run `yarn install` command
       
+    - name: Change Directory
+      run: cd ./Class2/project001
     - name: Build React App
-      run: cd ./Class2/project001 yarn build
+      run:  yarn build
     
     - name : Install Surge
       run: npm ./Class2/project001 install -g surge
