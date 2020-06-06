@@ -32,7 +32,6 @@ jobs:
         cmd: install # will run `yarn install` command
       
     - name: Build React App
-      working-directory: ./Class2/project001/
       run: yarn build
     - name : Install Surge
       working-directory: ./Class2/project001/
