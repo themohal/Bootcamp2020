@@ -29,8 +29,10 @@ jobs:
       with:
         cmd: install # will run `yarn install` command
         
-    - name: Build React App
-      run:  build
+   - uses: borales/actions-yarn@v2.0.0
+        with:
+        path: ~/.Class2/project001
+          cmd: build # will run `yarn build` command
     
     - name : Install Surge
       run: npm install -g surge
